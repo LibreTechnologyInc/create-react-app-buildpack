@@ -75,3 +75,6 @@ else
   echo "create-react-app `.buildpacks` not defined. Exiting."
   exit 1
 fi
+
+sed -i '40 a \ \ \ \ client_max_body_size 20M;' $BUILD_DIR/bin/config/templates/nginx.conf.erb
+
